@@ -1,0 +1,293 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+   --c1:#27AAE1; 
+   --c2:#EE2A7B;
+   --border: .8rem solid white;
+   
+}
+
+html, body {
+    background-image: linear-gradient(to left, transparent, #b3e5fc, transparent);
+
+}
+
+.section-music {
+    
+    height: 100vh; 
+    min-height: 100vh;
+    padding: 4rem 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-music h1 {
+    font-family: 'Arial', sans-serif;
+    line-height: 1;
+    margin-top: 10%;
+    font-size: 10rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff4e50, #f9d423, #4bc0c8, #ff4e50);
+    /*background: linear-gradient(90deg, #9b59b6, #8e44ad, #e052f3, #6c3483);*/
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateText 6s linear infinite, floatText 3s ease-in-out infinite;
+  }
+
+  @keyframes animateText {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+
+  @keyframes floatText {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+  }
+    
+
+
+
+.nav {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    position: fixed;
+    z-index: 99;
+}
+
+.nav a {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 2.1rem;
+    text-decoration: none;
+    margin: 0 1rem;
+    text-decoration: none;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg,
+      #ff4e50,
+      #f9d423,
+      #4bc0c8,
+      #ff4e50
+    );
+    background-size: 300% 300%;
+
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+            color: transparent;
+
+    animation: flow 6s ease infinite;
+    transition: transform 0.3s ease;
+  }
+
+  
+  .nav a:hover {
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+
+  @keyframes flow {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+ .imagem {
+    background-color: rgb(70, 68, 68);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.5);
+    background: url("../imagens/scores-9278299_1280.jpg");
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+}
+
+  
+.imagem .row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.37);
+    padding: 8rem 10rem;
+    
+}
+
+.imagem .row .litle {
+    padding: 2rem;
+}
+
+.imagem .row .litle h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.imagem .row .litle p {
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.imagem .row .litle a {
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+
+.btn {
+    background-color: transparent;
+    color: #fff;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.btn:hover {
+    letter-spacing: 0.1rem;
+}
+
+.menu {
+    padding: 6rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 95vh;
+}
+
+.title {
+    font-family: 'Arial', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    
+    background: linear-gradient(90deg, var(--c1), var(--c2));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: slide 8s ease-in-out infinite alternate;
+}
+
+  @keyframes slide {
+    from { background-position: 0% center; }
+    to   { background-position: 100% center; }
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    
+}
+
+
+.menu .box-container .box {
+    text-align: center;
+    padding: 5rem;
+    cursor: pointer;
+    --b: 2px;        
+    --r: 16px;  
+    position: relative;
+}
+
+.menu .box-container .box::before{
+    content:"";
+    position:absolute;
+    inset: 0;
+    border: inherit;
+    border-radius: 20px;
+    padding: var(--b);
+    background: conic-gradient(
+      from var(--ang, 0deg),
+      var(--c1), var(--c2), var(--c1)
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    animation: girar 14s linear infinite;
+    pointer-events: none;
+}
+
+
+.title2 {
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 1rem;
+    font-size: 2.2rem;
+    background: linear-gradient(135deg,
+      #ff4e50,
+      #f9d423,
+      #4bc0c8,
+      #ff4e50
+    );
+    background-size: 300% 300%;
+
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+            color: transparent;
+
+    animation: flow 6s ease infinite;
+    transition: transform 0.3s ease;
+  
+
+}
+
+.title2:hover {
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+
+.share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share p {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: #CB67A7;
+}
